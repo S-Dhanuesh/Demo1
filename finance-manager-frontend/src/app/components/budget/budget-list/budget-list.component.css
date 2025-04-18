@@ -1,0 +1,171 @@
+/* Main Container for Budget List */
+.budget-list-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff; /* Apply white background */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #1a237e;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* No Budgets Message */
+.no-budgets-message {
+  text-align: center;
+  color: #e65100;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Compact Search Bar */
+mat-form-field.search-bar {
+  width: 100%;                /* Full width of the parent container */
+  max-width: 400px;           /* Restrict max-width to make it compact */
+  margin-bottom: 20px;        /* Space between the search bar and the next element */
+}
+
+mat-form-field.search-bar .mat-input-element {
+  padding: 6px 14px;          /* Adjust padding to make the input more compact */
+  font-size: 14px;            /* Smaller font size for compactness */
+  border-radius: 20px;        /* Rounded corners for a modern look */
+  transition: all 0.3s ease;  /* Smooth transition effect for focus */
+  background-color: #f9f9f9; /* Light grey background */
+}
+
+mat-form-field.search-bar .mat-placeholder {
+  font-size: 14px;            /* Match font size for the placeholder */
+  color: #777;                /* Grey color for placeholder */
+}
+
+/* Focus Effect */
+mat-form-field.search-bar .mat-input-element:focus {
+  background-color: #fff;     /* White background when focused */
+  border: 2px solid #3f51b5;  /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3); /* Light shadow around focus */
+}
+
+mat-form-field.search-bar .mat-form-field-outline {
+  border-radius: 20px;        /* Rounded corners for the outline */
+}
+
+mat-form-field.search-bar:hover .mat-form-field-outline {
+  border-color: #3f51b5; /* Slight blue border on hover */
+}
+
+/* Month Filter */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Budget Card Styling */
+mat-card {
+  background-color: #fafafa; /* Set the background color for the card */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+mat-card:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Budget Card Title */
+mat-card-title {
+  color: #1a237e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Budget Info */
+mat-card-content p {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Budget Card Actions (Delete Button) */
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button[mat-raised-button] {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+button[mat-raised-button][color="warn"] {
+  background-color: #f44336;
+  color: #fff;
+}
+
+button[mat-raised-button][color="warn"]:hover {
+  background-color: #e53935;
+}
+
+/* Add Budget & Back to Home Buttons */
+div[style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;"] button {
+  font-size: 14px;
+  padding: 6px 12px;
+  width: fit-content;
+  border-radius: 8px;
+}
+
+/* Add Budget Button */
+button[mat-raised-button][color="accent"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+button[mat-raised-button][color="accent"]:hover {
+  background-color: #388e3c;
+}
+
+/* Back to Home Button */
+button[mat-raised-button][color="primary"] {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+button[mat-raised-button][color="primary"]:hover {
+  background-color: #1976d2;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .budget-list-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  mat-card {
+    padding: 15px;
+  }
+
+  mat-form-field {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,112 @@
+/* Container */
+.glow-form-container {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #1a237e;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Form Layout */
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Stylish Fields */
+.glowing-field {
+  width: 100%;
+}
+
+.glowing-field .mat-form-field-outline {
+  border-color: #1a237e;
+}
+
+.glowing-field.mat-focused .mat-form-field-outline-thick {
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px #3f51b5;
+}
+
+/* Compact Button */
+.glow-button {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.glow-button:hover {
+  background-color: #303f9f;
+  transform: translateY(-1px);
+}
+
+/* Navigation Buttons */
+.glow-form-container > div button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+button[color="accent"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button[color="accent"]:hover {
+  background-color: #388e3c;
+}
+
+button[color="primary"]:not(.glow-button) {
+  background-color: #1e88e5;
+  color: white;
+}
+
+button[color="primary"]:not(.glow-button):hover {
+  background-color: #1565c0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .glow-form-container {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .glow-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}

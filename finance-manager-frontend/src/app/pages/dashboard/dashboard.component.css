@@ -1,0 +1,202 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #eaf6fb 0%, #ffffff 100%);
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- APP HEADER ---------- */
+.app-header {
+  background-color: #1a237e;    /* Dark indigo */
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  position: relative;           /* For absolutely positioned buttons */
+}
+
+/* Top‑right buttons */
+.header-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  background-color: #ffffff;    /* White */
+  color: #1a237e;               /* Match header bg */
+  border: none;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: #e3e3e3;
+}
+
+/* Logo + Title */
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;                    /* Space between logo & text */
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1.5px;
+  color: #ffcc00;               /* Bright yellow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.app-title:hover {
+  color: #ff5722;               /* Warm orange on hover */
+}
+
+.logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Content wrapper under header */
+.content-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: transparent;
+}
+
+/* ---------- DASHBOARD COMPONENT ---------- */
+/* Dashboard Title (h1 inside dashboard component) */
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #005866;               /* Teal-blue accent */
+  margin-bottom: 25px;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.nav-buttons button {
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a237e;               /* Same indigo as header */
+  margin: 30px 0 20px;
+}
+
+/* Budget Grid */
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Budget Card */
+.budget-card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+  background-color: #ffffff;
+}
+
+.budget-card:hover {
+  transform: scale(1.02);
+}
+
+/* Avatar/Icon in Card Header */
+.budget-icon {
+  background-color: #e3f2fd;   /* Light blue */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Status Label */
+.status-label {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: #e0f7fa;   /* Pale cyan */
+  color: #00796b;               /* Teal */
+}
+
+/* Chart Section */
+.chart-section {
+  margin-top: 50px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+  .app-header {
+    padding: 25px 15px;
+  }
+
+  .header-buttons {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .header-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .app-title {
+    font-size: 2.2rem;
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: 40px;
+  }
+}

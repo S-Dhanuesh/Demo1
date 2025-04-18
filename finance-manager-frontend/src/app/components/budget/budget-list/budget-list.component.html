@@ -1,0 +1,38 @@
+<h2>📊 Budget List</h2>
+
+<!-- No budgets message -->
+<div *ngIf="budgets.length === 0">
+  <p>No budgets found.</p>
+</div>
+
+<!-- Month Filter -->
+<mat-form-field appearance="fill" style="margin-bottom: 20px; width: 100%;">
+  <mat-label>Filter by Month</mat-label>
+  <input matInput type="month" [(ngModel)]="selectedMonth" />
+</mat-form-field>
+
+
+
+<!-- Budget Cards (filtered by selectedMonth) -->
+<mat-card *ngFor="let budget of filteredBudgets" class="mb-2" style="margin-bottom: 16px;">
+  <mat-card-title>{{ budget.category }}</mat-card-title>
+  <mat-card-content>
+    <p>Limit: ₹{{ budget.limit }}</p>
+    <p *ngIf="budget.month">Month: {{ budget.month }}</p> <!-- Display the month if available -->
+  </mat-card-content>
+  <mat-card-actions *ngIf="budget.id !== undefined">
+    <button mat-raised-button color="warn" (click)="deleteBudget(budget.id)" style="font-size: 14px; padding: 6px 12px;">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>
+<!-- Buttons (Back to Home & Add Budget) -->
+<div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+  <button mat-raised-button color="accent" routerLink="/add-budget" style="font-size: 14px; padding: 6px 12px; width: fit-content;">
+    ➕ Add Budget
+  </button>
+
+  <button mat-raised-button color="primary" routerLink="/" style="font-size: 14px; padding: 6px 12px; width: fit-content;">
+    ← Back
+  </button>
+</div>
